@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 11 &amp; 12 · Phoebe Affirmations</title>
+<meta name="description" content="I honour the dreams that light me up. I choose my words with care and courage. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="11" aria-pressed="false">
+      <span class="num">KEY 11</span>
+      <span class="line">I honour the dreams that light me up.</span>
+    </button>
+    <button class="pick" data-lead="12" aria-pressed="false">
+      <span class="num">KEY 12</span>
+      <span class="line">I choose my words with care and courage.</span>
+    </button>
+  </div>
+
+  <!-- Key 11 leads -->
+  <section class="journey" id="lead-11" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I honour the dreams that light me up.</p>
+      <p>This is Key 11, the Gift of Idealism. Somewhere in you is a picture of how life could be. It isn't a fantasy to grow out of. It's a light to steer by.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I choose my words with care and courage.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 12, the Gift of Discrimination. A dream stays a dream until it's spoken. Key 12 is the voice that gives your vision shape: what to say, when, and to whom.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">Which dream came to mind first?<br>Who would you need to say it to, and what would you say?</p>
+    </div>
+  </section>
+
+  <!-- Key 12 leads -->
+  <section class="journey" id="lead-12" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I choose my words with care and courage.</p>
+      <p>This is Key 12, the Gift of Discrimination. Your words carry weight. Choosing them with care isn't holding back; it's letting what you say land where it's meant to.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I honour the dreams that light me up.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 11, the Gift of Idealism. Courage needs something worth speaking for. Key 11 is the dream your words are here to serve.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What have you been holding back from saying?<br>What dream sits underneath it?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this spoke to you</h2>
+    <p>I'm Phoebe, and through Radiant Oracle I offer intuitive readings with crystals and tarot, where the card chooses you and the message unfolds through conversation. I also run group readings for events, parties and gatherings.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (b) {
+        b.setAttribute('aria-pressed', b.dataset.lead === lead ? 'true' : 'false');
+      });
+      ['11', '12'].forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (b) {
+      b.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + b.dataset.lead);
+        show(b.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (start === '11' || start === '12') show(start, false);
+  })();
+</script>
+</body>
+</html>
