@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 7 &amp; 13 · Phoebe Affirmations</title>
+<meta name="description" content="I lead simply by being myself. I listen deeply, to others and to me. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="7" aria-pressed="false">
+      <span class="num">KEY 7</span>
+      <span class="line">I lead simply by being myself.</span>
+    </button>
+    <button class="pick" data-lead="13" aria-pressed="false">
+      <span class="num">KEY 13</span>
+      <span class="line">I listen deeply, to others and to me.</span>
+    </button>
+  </div>
+
+  <!-- Key 7 leads -->
+  <section class="journey" id="lead-7" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I lead simply by being myself.</p>
+      <p>This is Key 7, the Gift of Guidance. You don&#x27;t need a title to lead. When you live true to yourself, others quietly find their way by your example.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I listen deeply, to others and to me.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 13, the Gift of Discernment: the listening that makes your guidance wise.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">Who might be watching how you live?<br>What are you showing them without saying a word?</p>
+    </div>
+  </section>
+
+  <!-- Key 13 leads -->
+  <section class="journey" id="lead-13" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I listen deeply, to others and to me.</p>
+      <p>This is Key 13, the Gift of Discernment. Real listening means hearing what&#x27;s said and what&#x27;s underneath it, including your own inner voice.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I lead simply by being myself.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 7, the Gift of Guidance: what deep listening grows into, knowing which way to go.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">Who in your life needs to be truly heard?<br>What has your own inner voice been trying to tell you?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this spoke to you</h2>
+    <p>I'm Phoebe, and through Radiant Oracle I offer intuitive readings with crystals and tarot, where the card chooses you and the message unfolds through conversation. I also run group readings for events, parties and gatherings.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['7', '13'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>

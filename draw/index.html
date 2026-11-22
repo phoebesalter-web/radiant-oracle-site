@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Draw a Card · Phoebe Affirmations</title>
+<meta name="description" content="Let the card choose you. Draw a Phoebe affirmation card.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .stage { display: flex; justify-content: center; margin: 8px 0 28px; perspective: 1200px; }
+  .card {
+    width: 250px; height: 350px; position: relative;
+    transform-style: preserve-3d; transition: transform .8s cubic-bezier(.2,.7,.2,1);
+    cursor: pointer;
+  }
+  .card.flipped { transform: rotateY(180deg); }
+  .card.shuffle { animation: shuffle .6s ease-in-out; }
+  @keyframes shuffle {
+    0%,100% { transform: translateX(0) rotate(0); }
+    20% { transform: translateX(-18px) rotate(-6deg); }
+    40% { transform: translateX(16px) rotate(5deg); }
+    60% { transform: translateX(-10px) rotate(-3deg); }
+    80% { transform: translateX(6px) rotate(2deg); }
+  }
+  .face {
+    position: absolute; inset: 0; border-radius: 18px;
+    backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    border: 1px solid var(--gold);
+    box-shadow: 0 14px 40px rgba(176,138,74,.22);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 22px; text-align: center; overflow: hidden;
+  }
+  .back {
+    background:
+      radial-gradient(circle at 50% 38%, rgba(255,255,255,.9) 0%, transparent 38%),
+      radial-gradient(ellipse at 20% 20%, var(--lilac) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 30%, var(--blue) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 90%, var(--blush) 0%, transparent 60%),
+      var(--paper);
+  }
+  .back .big-star { font-size: 64px; color: var(--gold); line-height: 1; }
+  .back .nm { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 40px; color: var(--gold); margin-top: 10px; }
+  .back .sub { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--soft); }
+  .back .hint { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 18px; color: var(--soft); margin-top: 18px; }
+  .front { background: var(--paper); transform: rotateY(180deg); justify-content: space-between; }
+  .front .end { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .front .end.partner { transform: rotate(180deg); opacity: .55; }
+  .front .k { font-size: 11px; letter-spacing: .24em; color: var(--gold); }
+  .front .t { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 22px; line-height: 1.25; color: var(--ink); }
+  .front .end.partner .t { font-size: 17px; }
+  .front .mid { color: var(--gold); font-size: 22px; }
+  .actions { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .btn {
+    appearance: none; font: inherit; cursor: pointer;
+    padding: 12px 26px; border-radius: 999px; border: 1px solid var(--gold);
+    background: var(--gold); color: var(--paper); text-decoration: none; font-size: 16px;
+  }
+  .btn.ghost { background: transparent; color: var(--ink); }
+  .btn[hidden] { display: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .card { transition: none; } .card.shuffle { animation: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Let the card choose you.</p>
+
+  <div class="stage">
+    <div class="card" id="card" role="button" tabindex="0" aria-label="Shuffle and draw a card">
+      <div class="face back">
+        <div class="big-star">✦</div>
+        <div class="nm">Phoebe</div>
+        <div class="sub">Affirmations</div>
+        <div class="hint">Tap to draw</div>
+      </div>
+      <div class="face front" aria-live="polite">
+        <div class="end lead"><span class="k" id="leadKey"></span><span class="t" id="leadText"></span></div>
+        <div class="mid">✦</div>
+        <div class="end partner"><span class="k" id="partKey"></span><span class="t" id="partText"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn" id="draw">Shuffle and draw</button>
+    <a class="btn" id="go" href="#" hidden>Begin your journey</a>
+    <button class="btn ghost" id="again" hidden>Draw again</button>
+  </div>
+
+  <footer><a href="../" style="color: inherit;">Phoebe Affirmations</a> · A kinder you · A brighter tomorrow</footer>
+</main>
+<script src="deck.js"></script>
+<script>
+  (function () {
+    var card = document.getElementById('card');
+    var drawBtn = document.getElementById('draw');
+    var go = document.getElementById('go');
+    var again = document.getElementById('again');
+    var busy = false, last = null;
+
+    function pick() {
+      var deck = window.DECK || [];
+      var c, tries = 0;
+      do { c = deck[Math.floor(Math.random() * deck.length)]; tries++; }
+      while (deck.length > 1 && c === last && tries < 10);
+      last = c;
+      var flip = Math.random() < 0.5;
+      return { card: c, lead: flip ? c.b : c.a, other: flip ? c.a : c.b };
+    }
+
+    function draw() {
+      if (busy) return;
+      busy = true;
+      go.hidden = true; again.hidden = true; drawBtn.hidden = true;
+      var wasFlipped = card.classList.contains('flipped');
+      card.classList.remove('flipped');
+      setTimeout(function () {
+        card.classList.add('shuffle');
+        setTimeout(function () {
+          card.classList.remove('shuffle');
+          var r = pick();
+          document.getElementById('leadKey').textContent = 'KEY ' + r.lead;
+          document.getElementById('leadText').textContent = r.card.aff[r.lead];
+          document.getElementById('partKey').textContent = 'KEY ' + r.other;
+          document.getElementById('partText').textContent = r.card.aff[r.other];
+          go.href = '../keys/' + r.card.a + '-' + r.card.b + '/#' + r.lead;
+          card.classList.add('flipped');
+          setTimeout(function () { go.hidden = false; again.hidden = false; busy = false; }, 700);
+        }, 650);
+      }, wasFlipped ? 800 : 0);
+    }
+
+    drawBtn.addEventListener('click', draw);
+    again.addEventListener('click', draw);
+    card.addEventListener('click', function () { if (!card.classList.contains('flipped')) draw(); });
+    card.addEventListener('keydown', function (ev) { if ((ev.key === 'Enter' || ev.key === ' ') && !card.classList.contains('flipped')) { ev.preventDefault(); draw(); } });
+  })();
+</script>
+</body>
+</html>

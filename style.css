@@ -198,3 +198,6 @@ footer {
   .affirmation { font-size: 25px; }
   .journey { padding: 26px 20px; }
 }
+
+.journey a { color: var(--ink); text-decoration-color: var(--gold-soft); text-underline-offset: 3px; }
+.journey a:hover { color: var(--gold); }

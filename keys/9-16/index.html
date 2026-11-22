@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 9 &amp; 16 · Phoebe Affirmations</title>
+<meta name="description" content="Every small step I take matters. I am free to play with all my gifts. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="9" aria-pressed="false">
+      <span class="num">KEY 9</span>
+      <span class="line">Every small step I take matters.</span>
+    </button>
+    <button class="pick" data-lead="16" aria-pressed="false">
+      <span class="num">KEY 16</span>
+      <span class="line">I am free to play with all my gifts.</span>
+    </button>
+  </div>
+
+  <!-- Key 9 leads -->
+  <section class="journey" id="lead-9" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">Every small step I take matters.</p>
+      <p>This is Key 9, the Gift of Determination. Big changes are built from small, steady steps. Each one counts, even when you can&#x27;t see the difference yet.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I am free to play with all my gifts.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 16, the Gift of Versatility, which brings lightness and enjoyment to the steps along the way.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What small step could you take today?<br>What&#x27;s one step you&#x27;ve already taken that you haven&#x27;t given yourself credit for?</p>
+    </div>
+  </section>
+
+  <!-- Key 16 leads -->
+  <section class="journey" id="lead-16" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I am free to play with all my gifts.</p>
+      <p>This is Key 16, the Gift of Versatility. You don&#x27;t have to choose just one thing to be good at. Your many interests and talents are meant to be enjoyed.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">Every small step I take matters.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 9, the Gift of Determination, which helps your gifts grow through gentle, steady practice.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">Which of your gifts have you put aside?<br>What would it feel like to play with it again?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this spoke to you</h2>
+    <p>I'm Phoebe, and through Radiant Oracle I offer intuitive readings with crystals and tarot, where the card chooses you and the message unfolds through conversation. I also run group readings for events, parties and gatherings.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['9', '16'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>

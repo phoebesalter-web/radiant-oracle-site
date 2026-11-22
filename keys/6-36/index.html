@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 6 &amp; 36 · Phoebe Affirmations</title>
+<meta name="description" content="I can soften without losing myself. My heart stays open, even when life is hard. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="6" aria-pressed="false">
+      <span class="num">KEY 6</span>
+      <span class="line">I can soften without losing myself.</span>
+    </button>
+    <button class="pick" data-lead="36" aria-pressed="false">
+      <span class="num">KEY 36</span>
+      <span class="line">My heart stays open, even when life is hard.</span>
+    </button>
+  </div>
+
+  <!-- Key 6 leads -->
+  <section class="journey" id="lead-6" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I can soften without losing myself.</p>
+      <p>This is Key 6, the Gift of Diplomacy. Softening isn&#x27;t giving in. It&#x27;s choosing warmth over winning, while still knowing where you stand.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">My heart stays open, even when life is hard.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 36, the Gift of Humanity: the open heart that makes softening possible.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">Where are you bracing for a fight?<br>What might happen if you softened, just a little?</p>
+    </div>
+  </section>
+
+  <!-- Key 36 leads -->
+  <section class="journey" id="lead-36" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">My heart stays open, even when life is hard.</p>
+      <p>This is Key 36, the Gift of Humanity. Hard times can make us close up to protect ourselves. Staying open is a quiet kind of courage, and it lets life keep reaching you.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I can soften without losing myself.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 6, the Gift of Diplomacy, which shows you can stay open and still hold your ground.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What has made you want to close up lately?<br>What would help your heart feel safe enough to stay open?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this spoke to you</h2>
+    <p>I'm Phoebe, and through Radiant Oracle I offer intuitive readings with crystals and tarot, where the card chooses you and the message unfolds through conversation. I also run group readings for events, parties and gatherings.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['6', '36'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>
