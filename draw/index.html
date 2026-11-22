@@ -106,14 +106,11 @@
     var drawBtn = document.getElementById('draw');
     var go = document.getElementById('go');
     var again = document.getElementById('again');
-    var busy = false, last = null;
+    var busy = false;
 
     function pick() {
       var deck = window.DECK || [];
-      var c, tries = 0;
-      do { c = deck[Math.floor(Math.random() * deck.length)]; tries++; }
-      while (deck.length > 1 && c === last && tries < 10);
-      last = c;
+      var c = deck[Math.floor(Math.random() * deck.length)];
       var flip = Math.random() < 0.5;
       return { card: c, lead: flip ? c.b : c.a, other: flip ? c.a : c.b };
     }
