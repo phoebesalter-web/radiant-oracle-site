@@ -10,11 +10,13 @@ CARDS = [
       "1": {
         "intro": "This is Key 1, the Gift of Freshness. There's a spark in you that's entirely your own, not borrowed or copied. It doesn't need permission to shine.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 2, the Gift of Orientation: the quiet inner compass that lets your fire move in the right direction without forcing it.",
+        "try": "Place a hand just below your ribs and breathe into it. Imagine a small warm flame there, growing a little brighter with each breath in. Notice what it wants to light up.",
         "q": ["What lights you up lately?", "Where does it seem to want to go?"],
       },
       "2": {
         "intro": "This is Key 2, the Gift of Orientation. You don't have to map every step. Something in you already knows the direction, even when the path isn't visible yet.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 1, the Gift of Freshness: the spark that makes the journey worth taking.",
+        "try": "Close your eyes and let your body sway very slightly, side to side, until it finds its own still centre. Rest there. Notice the quiet sense of which way feels right.",
         "q": ["Where are you trying to control the route?", "What would trusting the direction feel like?"],
       },
     },
@@ -26,11 +28,13 @@ CARDS = [
       "3": {
         "intro": "This is Key 3, the Gift of Innovation. Change can feel like chaos, but it's often something new trying to be born. Curiosity turns it from a threat into a doorway.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 50, the Gift of Equilibrium: the still point that lets you meet change without losing yourself.",
+        "try": "Think of something that's changing. Instead of tensing, raise your eyebrows slightly, as if you're curious, and breathe out. Ask yourself, \"I wonder what this could become?\"",
         "q": ["What's changing around you?", "What might it be making room for?"],
       },
       "50": {
         "intro": "This is Key 50, the Gift of Equilibrium. Whatever is moving around you, there's a place inside that stays calm and fair. Coming back to it is always possible.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 3, the Gift of Innovation, a reminder that steadiness isn't standing still. It's what lets you welcome the new.",
+        "try": "Sit tall and place both hands on your lower belly. Breathe slowly in for four, out for six, three times. Feel the steady place that stays calm underneath everything.",
         "q": ["Where is your centre right now?", "What helps you find your way back to it?"],
       },
     },
@@ -42,11 +46,13 @@ CARDS = [
       "4": {
         "intro": "This is Key 4, the Gift of Understanding. The mind loves quick answers, but real understanding takes a breath first. It listens for the whole picture.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 49, the Gift of Revolution: what understanding makes possible, the freedom to change what no longer serves you.",
+        "try": "Before answering anything today, try one slow breath first. Practise now: think of a question on your mind, breathe in and out slowly, and notice what arrives in the pause.",
         "q": ["What question are you rushing to answer?", "What might you see if you waited a little longer?"],
       },
       "49": {
         "intro": "This is Key 49, the Gift of Revolution. Some habits, roles and relationships belonged to an earlier version of you. Letting them go isn't rejection. It's growth.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 4, the Gift of Understanding, which lets you release things with clarity rather than in a rush.",
+        "try": "Make a loose fist, as if you're holding on to an old habit. Breathe in. As you breathe out, slowly open your hand. Notice how it feels to let go.",
         "q": ["Which old pattern is ready to go?", "What do you understand now that you didn't before?"],
       },
     },
@@ -58,11 +64,13 @@ CARDS = [
       "5": {
         "intro": "This is Key 5, the Gift of Patience. Life moves in seasons, not straight lines. What feels like waiting is often things quietly ripening.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 35, the Gift of Adventure, which finds the richness in each moment along the way.",
+        "try": "Place a hand on your chest and feel your heartbeat or breath for a few moments. Let it set the pace. There's nowhere to rush to right now.",
         "q": ["Where are you pushing, instead of pausing to see what comes to you?", "What might show up if you waited a moment before acting?"],
       },
       "35": {
         "intro": "This is Key 35, the Gift of Adventure. Adventure isn't always somewhere new. It's meeting your own life with fresh eyes and noticing what's already here.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 5, the Gift of Patience, which lets the adventure unfold in its own time.",
+        "try": "Look around you as if you've just arrived somewhere new for the very first time. Find one thing you've never really noticed before.",
         "q": ["What in your life right now is quietly remarkable?", "What would change if you saw it that way?"],
       },
     },
@@ -74,11 +82,13 @@ CARDS = [
       "6": {
         "intro": "This is Key 6, the Gift of Diplomacy. Softening isn't giving in. It's choosing warmth over winning, while still knowing where you stand.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 36, the Gift of Humanity: the open heart that makes softening possible.",
+        "try": "Notice where you're holding tension: jaw, shoulders, hands. Breathe into that place and let it soften by just ten percent. Notice that you're still you.",
         "q": ["Where are you bracing for a fight?", "What might happen if you softened, just a little?"],
       },
       "36": {
         "intro": "This is Key 36, the Gift of Humanity. Hard times can make us close up to protect ourselves. Staying open is a quiet kind of courage, and it lets life keep reaching you.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 6, the Gift of Diplomacy, which shows you can stay open and still hold your ground.",
+        "try": "Place a hand on your heart and breathe gently into it. Imagine it softening and widening a little with each breath, like a door easing open.",
         "q": ["What has made you want to close up lately?", "What would help your heart feel safe enough to stay open?"],
       },
     },
@@ -90,11 +100,13 @@ CARDS = [
       "7": {
         "intro": "This is Key 7, the Gift of Guidance. You don't need a title to lead. When you live true to yourself, others quietly find their way by your example.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 13, the Gift of Discernment: the listening that makes your guidance wise.",
+        "try": "Stand or sit tall, chin level, shoulders relaxed. Take a breath and feel what it's like to simply take up your own space.",
         "q": ["Who might be watching how you live?", "What are you showing them without saying a word?"],
       },
       "13": {
         "intro": "This is Key 13, the Gift of Discernment. Real listening means hearing what's said and what's underneath it, including your own inner voice.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 7, the Gift of Guidance: what deep listening grows into, knowing which way to go.",
+        "try": "Close your eyes and listen to the furthest sound you can hear, then the nearest, then the sound of your own breath. Ask yourself quietly, \"What do I need to hear?\"",
         "q": ["Who in your life needs to be truly heard?", "What has your own inner voice been trying to tell you?"],
       },
     },
@@ -106,11 +118,13 @@ CARDS = [
       "8": {
         "intro": "This is Key 8, the Gift of Style. There's no one else quite like you, and the world doesn't need a copy of anyone. Being yourself is your greatest contribution.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 14, the Gift of Competence: what happens when you put your true self into your work.",
+        "try": "Think of a moment when you felt completely yourself. Remember where you were and how your body felt. Let that feeling fill you now.",
         "q": ["Where are you trying to fit in?", "What would you do differently if you stopped?"],
       },
       "14": {
         "intro": "This is Key 14, the Gift of Competence. When you work from love rather than pressure, effort turns into flow, and the results tend to take care of themselves.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 8, the Gift of Style, a reminder that how you do it is as much yours as what you do.",
+        "try": "Think of something you love doing. Notice where in your body you feel the pleasure of it. Breathe into that spot and let it grow.",
         "q": ["What do you do that makes time disappear?", "How could you make a little more room for it?"],
       },
     },
@@ -122,11 +136,13 @@ CARDS = [
       "9": {
         "intro": "This is Key 9, the Gift of Determination. Big changes are built from small, steady steps. Each one counts, even when you can't see the difference yet.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 16, the Gift of Versatility, which brings lightness and enjoyment to the steps along the way.",
+        "try": "Take one slow, deliberate step, or simply press one foot into the floor, then the other. Feel how each one carries you forward.",
         "q": ["What small step could you take today?", "What's one step you've already taken that you haven't given yourself credit for?"],
       },
       "16": {
         "intro": "This is Key 16, the Gift of Versatility. You don't have to choose just one thing to be good at. Your many interests and talents are meant to be enjoyed.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 9, the Gift of Determination, which helps your gifts grow through gentle, steady practice.",
+        "try": "Wiggle your fingers, roll your shoulders and let your face make a silly expression. Notice the lightness that comes with play.",
         "q": ["Which of your gifts have you put aside?", "What would it feel like to play with it again?"],
       },
     },
@@ -138,11 +154,13 @@ CARDS = [
       "11": {
         "intro": "This is Key 11, the Gift of Idealism. Somewhere in you is a picture of how life could be. It isn't a fantasy to grow out of. It's a light to steer by.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 12, the Gift of Discrimination. A dream stays a dream until it's spoken. Key 12 is the voice that gives your vision shape: what to say, when, and to whom.",
+        "try": "Close your eyes and picture a dream you hold, in as much colour and detail as you can. Notice where in your body you feel it light up.",
         "q": ["Which dream came to mind first?", "Who would you need to say it to, and what would you say?"],
       },
       "12": {
         "intro": "This is Key 12, the Gift of Discrimination. Your words carry weight. Choosing them with care isn't holding back; it's letting what you say land where it's meant to.",
         "partner": "Every Gene Key has a partner, its other half. Yours is Key 11, the Gift of Idealism. Courage needs something worth speaking for. Key 11 is the dream your words are here to serve.",
+        "try": "Place your fingertips lightly on your throat and hum softly for a breath or two. Feel your voice. Then think of one true thing you'd like to say.",
         "q": ["What have you been holding back from saying?", "What dream sits underneath it?"],
       },
     },
