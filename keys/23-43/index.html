@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 23 &amp; 43 · Phoebe Affirmations</title>
+<meta name="description" content="I keep it simple. My inner voice knows. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="23" aria-pressed="false">
+      <span class="num">KEY 23</span>
+      <span class="line">I keep it simple.</span>
+    </button>
+    <button class="pick" data-lead="43" aria-pressed="false">
+      <span class="num">KEY 43</span>
+      <span class="line">My inner voice knows.</span>
+    </button>
+  </div>
+
+  <!-- Key 23 leads -->
+  <section class="journey" id="lead-23" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I keep it simple.</p>
+      <p>This is Key 23, the Gift of Simplicity. When life feels complicated, the answer is often simpler than we think. Clarity comes from stripping things back to what&#x27;s true.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">My inner voice knows.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 43, the Gift of Insight: the clear inner knowing that simplicity makes room for.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Take one deep breath and let it all go with a sigh. Ask yourself, &quot;What&#x27;s the simplest thing that&#x27;s true right now?&quot; Wait for the first answer.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What are you overcomplicating?<br>What would the simple version look like?</p>
+    </div>
+  </section>
+
+  <!-- Key 43 leads -->
+  <section class="journey" id="lead-43" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">My inner voice knows.</p>
+      <p>This is Key 43, the Gift of Insight. Answers often arrive suddenly, in the shower, on a walk or half asleep. That quiet inner voice knows more than the busy mind.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I keep it simple.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 23, the Gift of Simplicity, which helps you share your insight in a way others can hear.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Close your eyes and place a hand over your ear, as if listening inwards. Ask a question you&#x27;ve been wondering about. Notice the very first word or image that comes.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">When has your inner voice been right before?<br>What is it saying now?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this was hard to reach</h2>
+    <p>Some shifts come more easily with someone beside you. I'm Phoebe, of Radiant Oracle: a PSYCH-K® coach, Human Design and Gene Keys coach, astrologer and tarot coach. I work one to one and in groups, helping you change the beliefs that hold you back and read your own life more clearly.</p>
+    <p>Follow along on Instagram for more practices, or message me there to see how I can help.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['23', '43'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>

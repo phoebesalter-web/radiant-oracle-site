@@ -102,5 +102,37 @@ window.DECK = [
    "20": "I am fully here, right now.",
    "34": "I have the strength my life asks of me."
   }
+ },
+ {
+  "a": "21",
+  "b": "48",
+  "aff": {
+   "21": "I am the authority in my own life.",
+   "48": "I have what I need to meet what comes."
+  }
+ },
+ {
+  "a": "22",
+  "b": "47",
+  "aff": {
+   "22": "I meet life with grace.",
+   "47": "Every feeling I have can become wisdom."
+  }
+ },
+ {
+  "a": "23",
+  "b": "43",
+  "aff": {
+   "23": "I keep it simple.",
+   "43": "My inner voice knows."
+  }
+ },
+ {
+  "a": "24",
+  "b": "44",
+  "aff": {
+   "24": "I welcome the quiet space where new ideas arrive.",
+   "44": "I recognise my true allies."
+  }
  }
 ];

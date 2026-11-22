@@ -237,6 +237,115 @@ CARDS = [
       },
     },
   },
+  {
+    "a": "21",
+    "b": "48",
+    "aff": {
+      "21": "I am the authority in my own life.",
+      "48": "I have what I need to meet what comes."
+    },
+    "lead": {
+      "21": {
+        "intro": "This is Key 21, the Gift of Authority. You don't need anyone's permission to live your life your way. Real authority is quiet: it's simply taking charge of your own choices.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 48, the Gift of Resourcefulness: the inner wealth that backs up your choices.",
+        "try": "Sit tall and rest your hands on your thighs. Say quietly, \"This is my life.\" Notice how your body responds: does it settle, or bristle?",
+        "q": [
+          "Where are you waiting for permission?",
+          "What would you choose if it were entirely up to you?"
+        ]
+      },
+      "48": {
+        "intro": "This is Key 48, the Gift of Resourcefulness. When something new arrives, it's easy to feel you're not enough. But you have more inside you, more skills, wisdom and courage, than you realise.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 21, the Gift of Authority, which trusts you to use what you have.",
+        "try": "Think of a challenge you've already come through. Remember one thing you did that helped. Breathe that memory into your chest and let it remind you.",
+        "q": [
+          "What's coming up that feels bigger than you?",
+          "What have you already got that could help?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "22",
+    "b": "47",
+    "aff": {
+      "22": "I meet life with grace.",
+      "47": "Every feeling I have can become wisdom."
+    },
+    "lead": {
+      "22": {
+        "intro": "This is Key 22, the Gift of Graciousness. Grace isn't about being perfect. It's meeting whatever comes, the lovely and the difficult, with an open, gentle heart.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 47, the Gift of Transmutation: what grace makes possible, even hard feelings turning into understanding.",
+        "try": "Let your face soften into the beginning of a smile. Breathe in, and as you breathe out, imagine you're saying \"yes\" to this moment, just as it is.",
+        "q": [
+          "What in your life could you meet more gently?"
+        ]
+      },
+      "47": {
+        "intro": "This is Key 47, the Gift of Transmutation. Difficult feelings aren't mistakes. Held kindly, they slowly change into something wiser, like compost becoming soil.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 22, the Gift of Graciousness: the gentle way to hold your feelings while they change.",
+        "try": "Name a feeling you've had lately. Find where it lives in your body and rest a hand there. Breathe into it, without trying to fix it, and ask what it knows.",
+        "q": [
+          "What might this feeling be teaching you?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "23",
+    "b": "43",
+    "aff": {
+      "23": "I keep it simple.",
+      "43": "My inner voice knows."
+    },
+    "lead": {
+      "23": {
+        "intro": "This is Key 23, the Gift of Simplicity. When life feels complicated, the answer is often simpler than we think. Clarity comes from stripping things back to what's true.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 43, the Gift of Insight: the clear inner knowing that simplicity makes room for.",
+        "try": "Take one deep breath and let it all go with a sigh. Ask yourself, \"What's the simplest thing that's true right now?\" Wait for the first answer.",
+        "q": [
+          "What are you overcomplicating?",
+          "What would the simple version look like?"
+        ]
+      },
+      "43": {
+        "intro": "This is Key 43, the Gift of Insight. Answers often arrive suddenly, in the shower, on a walk or half asleep. That quiet inner voice knows more than the busy mind.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 23, the Gift of Simplicity, which helps you share your insight in a way others can hear.",
+        "try": "Close your eyes and place a hand over your ear, as if listening inwards. Ask a question you've been wondering about. Notice the very first word or image that comes.",
+        "q": [
+          "When has your inner voice been right before?",
+          "What is it saying now?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "24",
+    "b": "44",
+    "aff": {
+      "24": "I welcome the quiet space where new ideas arrive.",
+      "44": "I recognise my true allies."
+    },
+    "lead": {
+      "24": {
+        "intro": "This is Key 24, the Gift of Invention. New ideas rarely come when we're straining for them. They arrive in the pauses, when the mind finally rests.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 44, the Gift of Teamwork, which brings your ideas to life with the right people beside you.",
+        "try": "Let your eyes go soft and unfocused, as if gazing at a far horizon. Breathe slowly. For a few breaths, don't think about anything. Just leave space.",
+        "q": [
+          "Where can you make more quiet space in your day?"
+        ]
+      },
+      "44": {
+        "intro": "This is Key 44, the Gift of Teamwork. Some people simply fit. Your instincts can recognise who's truly on your side, and who brings out your best.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 24, the Gift of Invention, which gives your partnerships fresh ideas to grow from.",
+        "try": "Bring to mind three people in your life, one at a time. Notice how your body responds to each: lighter, heavier, warmer, tighter. Trust what you feel.",
+        "q": [
+          "Who leaves you feeling more like yourself?",
+          "How could you spend more time with them?"
+        ]
+      }
+    }
+  },
 ]
 
 e = html.escape

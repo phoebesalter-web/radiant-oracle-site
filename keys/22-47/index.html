@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 22 &amp; 47 · Phoebe Affirmations</title>
+<meta name="description" content="I meet life with grace. Every feeling I have can become wisdom. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="22" aria-pressed="false">
+      <span class="num">KEY 22</span>
+      <span class="line">I meet life with grace.</span>
+    </button>
+    <button class="pick" data-lead="47" aria-pressed="false">
+      <span class="num">KEY 47</span>
+      <span class="line">Every feeling I have can become wisdom.</span>
+    </button>
+  </div>
+
+  <!-- Key 22 leads -->
+  <section class="journey" id="lead-22" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I meet life with grace.</p>
+      <p>This is Key 22, the Gift of Graciousness. Grace isn&#x27;t about being perfect. It&#x27;s meeting whatever comes, the lovely and the difficult, with an open, gentle heart.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">Every feeling I have can become wisdom.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 47, the Gift of Transmutation: what grace makes possible, even hard feelings turning into understanding.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Let your face soften into the beginning of a smile. Breathe in, and as you breathe out, imagine you&#x27;re saying &quot;yes&quot; to this moment, just as it is.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What in your life could you meet more gently?</p>
+    </div>
+  </section>
+
+  <!-- Key 47 leads -->
+  <section class="journey" id="lead-47" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">Every feeling I have can become wisdom.</p>
+      <p>This is Key 47, the Gift of Transmutation. Difficult feelings aren&#x27;t mistakes. Held kindly, they slowly change into something wiser, like compost becoming soil.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I meet life with grace.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 22, the Gift of Graciousness: the gentle way to hold your feelings while they change.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Name a feeling you&#x27;ve had lately. Find where it lives in your body and rest a hand there. Breathe into it, without trying to fix it, and ask what it knows.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What might this feeling be teaching you?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this was hard to reach</h2>
+    <p>Some shifts come more easily with someone beside you. I'm Phoebe, of Radiant Oracle: a PSYCH-K® coach, Human Design and Gene Keys coach, astrologer and tarot coach. I work one to one and in groups, helping you change the beliefs that hold you back and read your own life more clearly.</p>
+    <p>Follow along on Instagram for more practices, or message me there to see how I can help.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['22', '47'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>

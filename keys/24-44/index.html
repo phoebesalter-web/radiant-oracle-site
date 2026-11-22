@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 24 &amp; 44 · Phoebe Affirmations</title>
+<meta name="description" content="I welcome the quiet space where new ideas arrive. I recognise my true allies. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="24" aria-pressed="false">
+      <span class="num">KEY 24</span>
+      <span class="line">I welcome the quiet space where new ideas arrive.</span>
+    </button>
+    <button class="pick" data-lead="44" aria-pressed="false">
+      <span class="num">KEY 44</span>
+      <span class="line">I recognise my true allies.</span>
+    </button>
+  </div>
+
+  <!-- Key 24 leads -->
+  <section class="journey" id="lead-24" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I welcome the quiet space where new ideas arrive.</p>
+      <p>This is Key 24, the Gift of Invention. New ideas rarely come when we&#x27;re straining for them. They arrive in the pauses, when the mind finally rests.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I recognise my true allies.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 44, the Gift of Teamwork, which brings your ideas to life with the right people beside you.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Let your eyes go soft and unfocused, as if gazing at a far horizon. Breathe slowly. For a few breaths, don&#x27;t think about anything. Just leave space.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">Where can you make more quiet space in your day?</p>
+    </div>
+  </section>
+
+  <!-- Key 44 leads -->
+  <section class="journey" id="lead-44" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I recognise my true allies.</p>
+      <p>This is Key 44, the Gift of Teamwork. Some people simply fit. Your instincts can recognise who&#x27;s truly on your side, and who brings out your best.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I welcome the quiet space where new ideas arrive.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 24, the Gift of Invention, which gives your partnerships fresh ideas to grow from.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Bring to mind three people in your life, one at a time. Notice how your body responds to each: lighter, heavier, warmer, tighter. Trust what you feel.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">Who leaves you feeling more like yourself?<br>How could you spend more time with them?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this was hard to reach</h2>
+    <p>Some shifts come more easily with someone beside you. I'm Phoebe, of Radiant Oracle: a PSYCH-K® coach, Human Design and Gene Keys coach, astrologer and tarot coach. I work one to one and in groups, helping you change the beliefs that hold you back and read your own life more clearly.</p>
+    <p>Follow along on Instagram for more practices, or message me there to see how I can help.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['24', '44'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>
