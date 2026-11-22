@@ -1,2 +1,2 @@
 # radiant-oracle-site
-Gene Keys affirmation card journeys
+Phoebe Affirmations: card journeys
