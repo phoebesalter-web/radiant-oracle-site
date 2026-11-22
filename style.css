@@ -203,3 +203,7 @@ footer {
 .journey a:hover { color: var(--gold); }
 
 .practice { font-size: 17px; line-height: 1.7; }
+
+div.intro { margin-bottom: 32px; }
+div.intro p { margin: 0 0 6px; }
+div.intro .intro-lead { font-size: 27px; color: var(--ink); margin-bottom: 14px; }
