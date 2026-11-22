@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 56 &amp; 60 · Phoebe Affirmations</title>
+<meta name="description" content="My story enriches my life. Structure gives my dreams a home. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="56" aria-pressed="false">
+      <span class="num">KEY 56</span>
+      <span class="line">My story enriches my life.</span>
+    </button>
+    <button class="pick" data-lead="60" aria-pressed="false">
+      <span class="num">KEY 60</span>
+      <span class="line">Structure gives my dreams a home.</span>
+    </button>
+  </div>
+
+  <!-- Key 56 leads -->
+  <section class="journey" id="lead-56" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">My story enriches my life.</p>
+      <p>This is Key 56, the Gift of Enrichment. Every chapter of your life, the joyful and the challenging, adds richness and meaning. Your story is still being written.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">Structure gives my dreams a home.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 60, the Gift of Realism, which gives your story a shape to grow in.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Think of one moment in your life that shaped who you are. Breathe in, and notice the gift it carries. Let yourself appreciate how far you&#x27;ve come.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What chapter of your story are you in right now?<br>What would you love the next one to hold?</p>
+    </div>
+  </section>
+
+  <!-- Key 60 leads -->
+  <section class="journey" id="lead-60" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">Structure gives my dreams a home.</p>
+      <p>This is Key 60, the Gift of Realism. Dreams need somewhere to land. A little structure, like a routine, a plan or a first step, turns inspiration into something real.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">My story enriches my life.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 56, the Gift of Enrichment, which keeps the structure full of life and meaning.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Picture a dream you hold. Now imagine building a simple, beautiful container for it, like a garden bed or a little house. Breathe, and notice how it feels to give it a home.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What one small structure would help your dream take root?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this was hard to reach</h2>
+    <p>Some shifts come more easily with someone beside you. I'm Phoebe, of Radiant Oracle: a PSYCH-K® coach, Human Design and Gene Keys coach, astrologer and tarot coach. I work one to one and in groups, helping you change the beliefs that hold you back and read your own life more clearly.</p>
+    <p>Follow along on Instagram for more practices, or message me there to see how I can help.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['56', '60'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>

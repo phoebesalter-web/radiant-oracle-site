@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 63 &amp; 64 · Phoebe Affirmations</title>
+<meta name="description" content="My questions open doors. I trust the beauty of the unknown. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="63" aria-pressed="false">
+      <span class="num">KEY 63</span>
+      <span class="line">My questions open doors.</span>
+    </button>
+    <button class="pick" data-lead="64" aria-pressed="false">
+      <span class="num">KEY 64</span>
+      <span class="line">I trust the beauty of the unknown.</span>
+    </button>
+  </div>
+
+  <!-- Key 63 leads -->
+  <section class="journey" id="lead-63" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">My questions open doors.</p>
+      <p>This is Key 63, the Gift of Inquiry. A good question is a key. Curiosity leads you into new understanding and fresh possibilities.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I trust the beauty of the unknown.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 64, the Gift of Imagination, which lets you enjoy the answers as they slowly arrive.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Take a breath and ask yourself a question beginning with &quot;I wonder…&quot; Say it slowly. Notice how your body feels when you&#x27;re curious.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What are you wondering about right now?</p>
+    </div>
+  </section>
+
+  <!-- Key 64 leads -->
+  <section class="journey" id="lead-64" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I trust the beauty of the unknown.</p>
+      <p>This is Key 64, the Gift of Imagination. The unknown is full of possibility. When you relax into it, your imagination comes alive with images, ideas and dreams.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">My questions open doors.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 63, the Gift of Inquiry, which guides you gently through the unknown.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Close your eyes and imagine a mist slowly clearing. Let images, colours or shapes appear by themselves, in their own time.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What did your imagination show you?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this was hard to reach</h2>
+    <p>Some shifts come more easily with someone beside you. I'm Phoebe, of Radiant Oracle: a PSYCH-K® coach, Human Design and Gene Keys coach, astrologer and tarot coach. I work one to one and in groups, helping you change the beliefs that hold you back and read your own life more clearly.</p>
+    <p>Follow along on Instagram for more practices, or message me there to see how I can help.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['63', '64'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>

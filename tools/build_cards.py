@@ -568,6 +568,193 @@ CARDS = [
       }
     }
   },
+  {
+    "a": "51",
+    "b": "57",
+    "aff": {
+      "51": "I have the courage to be who I am.",
+      "57": "I trust the quiet knowing within me."
+    },
+    "lead": {
+      "51": {
+        "intro": "This is Key 51, the Gift of Initiative. Being yourself sometimes means stepping out first, before anyone else does. Courage is the jolt of aliveness that moves you forward.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 57, the Gift of Intuition, which tells you which step is yours to take.",
+        "try": "Stand or sit tall, and take a quick, bright breath in through your nose. Feel the little spark of energy it brings. Ask yourself, \"What's my next bold step?\"",
+        "q": [
+          "Where are you ready to show more of who you are?"
+        ]
+      },
+      "57": {
+        "intro": "This is Key 57, the Gift of Intuition. Your intuition speaks softly, through a hunch, a feeling or a gentle nudge. The more you listen, the clearer it becomes.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 51, the Gift of Initiative, which gives you the courage to act on what you know.",
+        "try": "Think of a choice in front of you. Turn it into a simple yes-or-no question, such as \"Is this right for me?\" or \"Do I want to go?\" Close your eyes, ask it silently, and notice the very first feeling in your body: an opening and lightness, or a tightening and heaviness. That first feeling is your knowing.",
+        "q": [
+          "What has your intuition been nudging you towards?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "52",
+    "b": "58",
+    "aff": {
+      "52": "I grow at my own pace.",
+      "58": "Joy rises in me naturally."
+    },
+    "lead": {
+      "52": {
+        "intro": "This is Key 52, the Gift of Restraint. Stillness holds power. When you move at your own pace, your energy gathers, and your growth becomes steady and strong.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 58, the Gift of Vitality: the joy that blossoms when you give yourself time.",
+        "try": "Sit completely still for three slow breaths, like a mountain. Feel your weight settle downwards. Notice the calm strength in stillness.",
+        "q": [
+          "Where are you trying to grow faster than feels right?",
+          "What pace feels true to you?"
+        ]
+      },
+      "58": {
+        "intro": "This is Key 58, the Gift of Vitality. Joy is your natural state. It rises by itself when you make room for it, often in the smallest moments.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 52, the Gift of Restraint, which lets that joy grow deep roots.",
+        "try": "Think of something small that delights you: sunlight, a favourite song, a warm drink. Let a smile come. Feel where the joy rises in your body.",
+        "q": [
+          "What brings you joy that you could invite in more often?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "53",
+    "b": "54",
+    "aff": {
+      "53": "Every ending makes space for something new.",
+      "54": "I rise, and I lift others with me."
+    },
+    "lead": {
+      "53": {
+        "intro": "This is Key 53, the Gift of Expansion. Endings can feel like loss, yet they also clear the ground. Every closing chapter makes room for the next one to begin.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 54, the Gift of Aspiration: the upward energy that fills the new space.",
+        "try": "Breathe all the way out, emptying your lungs completely. Pause. Then let the next breath fill you slowly and fully. Notice how emptiness makes room.",
+        "q": [
+          "What's ending in your life?",
+          "What might it be making space for?"
+        ]
+      },
+      "54": {
+        "intro": "This is Key 54, the Gift of Aspiration. Your ambition is a good thing, especially when it lifts the people around you. Rising together makes the climb worth it.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 53, the Gift of Expansion, which keeps opening new chapters for you to grow into.",
+        "try": "Stand up and slowly raise your arms above your head as you breathe in. Feel yourself lengthen. As you lower them, imagine reaching a hand to someone beside you.",
+        "q": [
+          "What are you rising towards?",
+          "Who could you bring with you?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "55",
+    "b": "59",
+    "aff": {
+      "55": "My spirit is free, whatever I am feeling.",
+      "59": "Into me, I see, and I let others see me too."
+    },
+    "lead": {
+      "55": {
+        "intro": "This is Key 55, the Gift of Freedom. Feelings come and go like weather. Underneath them all is a part of you that stays free, open and whole.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 59, the Gift of Intimacy: that freedom shared, the courage to be truly seen.",
+        "try": "Imagine your feelings as clouds passing across a wide, open sky. Breathe slowly. Notice that you are the sky, spacious and free, whatever the weather.",
+        "q": [
+          "What would it feel like to let this feeling simply pass through?"
+        ]
+      },
+      "59": {
+        "intro": "This is Key 59, the Gift of Intimacy. Closeness begins with seeing yourself honestly. When you're at home with who you are, you can let others in.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 55, the Gift of Freedom, which makes it safe to be seen, feelings and all.",
+        "try": "Place a hand on your heart and close your eyes. Ask, \"What's true for me right now?\" Let the answer come, and meet it with warmth.",
+        "q": [
+          "Who would you like to let a little closer?",
+          "What would you show them?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "56",
+    "b": "60",
+    "aff": {
+      "56": "My story enriches my life.",
+      "60": "Structure gives my dreams a home."
+    },
+    "lead": {
+      "56": {
+        "intro": "This is Key 56, the Gift of Enrichment. Every chapter of your life, the joyful and the challenging, adds richness and meaning. Your story is still being written.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 60, the Gift of Realism, which gives your story a shape to grow in.",
+        "try": "Think of one moment in your life that shaped who you are. Breathe in, and notice the gift it carries. Let yourself appreciate how far you've come.",
+        "q": [
+          "What chapter of your story are you in right now?",
+          "What would you love the next one to hold?"
+        ]
+      },
+      "60": {
+        "intro": "This is Key 60, the Gift of Realism. Dreams need somewhere to land. A little structure, like a routine, a plan or a first step, turns inspiration into something real.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 56, the Gift of Enrichment, which keeps the structure full of life and meaning.",
+        "try": "Picture a dream you hold. Now imagine building a simple, beautiful container for it, like a garden bed or a little house. Breathe, and notice how it feels to give it a home.",
+        "q": [
+          "What one small structure would help your dream take root?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "61",
+    "b": "62",
+    "aff": {
+      "61": "I am inspired by the mystery of life.",
+      "62": "I say what I mean, with love."
+    },
+    "lead": {
+      "61": {
+        "intro": "This is Key 61, the Gift of Inspiration. Wonder opens you to ideas and insights that come from beyond the thinking mind, and life is full of things to wonder at.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 62, the Gift of Precision, which helps you put your inspiration into words.",
+        "try": "Look up at the sky, or out of a window, and let your gaze rest on the furthest thing you can see. Breathe slowly, and let a sense of wonder in.",
+        "q": [
+          "What in life fills you with wonder?"
+        ]
+      },
+      "62": {
+        "intro": "This is Key 62, the Gift of Precision. Clear words are a kindness. When you say exactly what you mean, gently, people know where they stand.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 61, the Gift of Inspiration, which gives your words a deeper source.",
+        "try": "Think of something you'd like to say to someone. Shape it into one clear, kind sentence. Place a hand on your heart and say it softly to yourself.",
+        "q": [
+          "What would you love to say clearly and kindly?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "63",
+    "b": "64",
+    "aff": {
+      "63": "My questions open doors.",
+      "64": "I trust the beauty of the unknown."
+    },
+    "lead": {
+      "63": {
+        "intro": "This is Key 63, the Gift of Inquiry. A good question is a key. Curiosity leads you into new understanding and fresh possibilities.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 64, the Gift of Imagination, which lets you enjoy the answers as they slowly arrive.",
+        "try": "Take a breath and ask yourself a question beginning with \"I wonder…\" Say it slowly. Notice how your body feels when you're curious.",
+        "q": [
+          "What are you wondering about right now?"
+        ]
+      },
+      "64": {
+        "intro": "This is Key 64, the Gift of Imagination. The unknown is full of possibility. When you relax into it, your imagination comes alive with images, ideas and dreams.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 63, the Gift of Inquiry, which guides you gently through the unknown.",
+        "try": "Close your eyes and imagine a mist slowly clearing. Let images, colours or shapes appear by themselves, in their own time.",
+        "q": [
+          "What did your imagination show you?"
+        ]
+      }
+    }
+  },
 ]
 
 e = html.escape

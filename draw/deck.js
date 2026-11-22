@@ -198,5 +198,61 @@ window.DECK = [
    "38": "I meet my challenges with heart.",
    "39": "My energy is alive and creative."
   }
+ },
+ {
+  "a": "51",
+  "b": "57",
+  "aff": {
+   "51": "I have the courage to be who I am.",
+   "57": "I trust the quiet knowing within me."
+  }
+ },
+ {
+  "a": "52",
+  "b": "58",
+  "aff": {
+   "52": "I grow at my own pace.",
+   "58": "Joy rises in me naturally."
+  }
+ },
+ {
+  "a": "53",
+  "b": "54",
+  "aff": {
+   "53": "Every ending makes space for something new.",
+   "54": "I rise, and I lift others with me."
+  }
+ },
+ {
+  "a": "55",
+  "b": "59",
+  "aff": {
+   "55": "My spirit is free, whatever I am feeling.",
+   "59": "Into me, I see, and I let others see me too."
+  }
+ },
+ {
+  "a": "56",
+  "b": "60",
+  "aff": {
+   "56": "My story enriches my life.",
+   "60": "Structure gives my dreams a home."
+  }
+ },
+ {
+  "a": "61",
+  "b": "62",
+  "aff": {
+   "61": "I am inspired by the mystery of life.",
+   "62": "I say what I mean, with love."
+  }
+ },
+ {
+  "a": "63",
+  "b": "64",
+  "aff": {
+   "63": "My questions open doors.",
+   "64": "I trust the beauty of the unknown."
+  }
  }
 ];
