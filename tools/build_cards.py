@@ -346,6 +346,117 @@ CARDS = [
       }
     }
   },
+  {
+    "a": "25",
+    "b": "46",
+    "aff": {
+      "25": "I have the courage to feel what I feel.",
+      "46": "I delight in being alive in my body."
+    },
+    "lead": {
+      "25": {
+        "intro": "This is Key 25, the Gift of Acceptance. Feelings aren't right or wrong. Letting yourself feel them, fully and kindly, takes courage, and it's how they move through.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 46, the Gift of Delight: what opens up when you stop pushing feelings away, the simple pleasure of being alive.",
+        "try": "Place one hand on your chest and one on your belly. Breathe slowly and say silently, \"Whatever I'm feeling is welcome.\" Let it be there, just as it is.",
+        "q": [
+          "What feeling have you been holding at arm's length?",
+          "What happens when you let it in?"
+        ]
+      },
+      "46": {
+        "intro": "This is Key 46, the Gift of Delight. Your body isn't just something that carries you around. It's how you taste, touch, move and feel the joy of being here.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 25, the Gift of Acceptance, which lets every part of you be welcome, so delight can flow freely.",
+        "try": "Stretch slowly in whatever way your body wants to. Notice one sensation that feels good: warmth, softness, a loosening. Linger there for a breath or two.",
+        "q": [
+          "What does your body love?",
+          "When did you last give it that?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "26",
+    "b": "45",
+    "aff": {
+      "26": "I speak from my heart's true intention.",
+      "45": "Together, we are more."
+    },
+    "lead": {
+      "26": {
+        "intro": "This is Key 26, the Gift of Artfulness. When your words come from your heart, people feel it. You don't need to persuade or impress, only to mean what you say.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 45, the Gift of Synergy: what heartfelt words create, real connection and shared purpose.",
+        "try": "Place a hand on your heart. Think of something you want to say to someone. Before you speak, ask your heart, \"What do I really mean?\" Notice the answer.",
+        "q": [
+          "What would you say if you were speaking purely from your heart?"
+        ]
+      },
+      "45": {
+        "intro": "This is Key 45, the Gift of Synergy. Some things can't be done alone, and don't need to be. When people bring their gifts together, something greater becomes possible.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 26, the Gift of Artfulness: how you invite others in honestly.",
+        "try": "Think of someone you'd love to create something with. Picture the two of you side by side. Breathe, and notice how it feels not to have to do it all yourself.",
+        "q": [
+          "Who could you share the load with?",
+          "What might you create together?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "27",
+    "b": "28",
+    "aff": {
+      "27": "I give freely and with joy.",
+      "28": "I embrace all of who I am, light and shadow."
+    },
+    "lead": {
+      "27": {
+        "intro": "This is Key 27, the Gift of Altruism. Real giving comes from fullness, not obligation. When you give because you want to, it nourishes you as much as the person receiving.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 28, the Gift of Totality, a reminder to include yourself in your care.",
+        "try": "Cup your hands together in front of you, as if holding something precious. Imagine filling them first for yourself, then offering what overflows to someone you love.",
+        "q": [
+          "Are you giving from fullness or from emptiness right now?",
+          "How could you receive a little more?"
+        ]
+      },
+      "28": {
+        "intro": "This is Key 28, the Gift of Totality. You don't have to hide the messy, difficult parts of yourself. Every part has a story, and every part belongs.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 27, the Gift of Altruism, which flows more freely when you're no longer spending energy hiding.",
+        "try": "Wrap your arms around yourself in a gentle hug. Breathe in, and as you breathe out, say silently, \"All of me is welcome here.\"",
+        "q": [
+          "Which part of you have you been keeping in the dark?",
+          "What might it need from you?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "29",
+    "b": "30",
+    "aff": {
+      "29": "I commit to myself, again and again.",
+      "30": "I hold my desires lightly."
+    },
+    "lead": {
+      "29": {
+        "intro": "This is Key 29, the Gift of Commitment. Commitment isn't a single promise. It's saying yes to yourself again each day, especially on the days it's hard.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 30, the Gift of Lightness, which keeps your commitment joyful rather than heavy.",
+        "try": "Place both hands on your belly and feel it rise and fall. With each breath out, say silently, \"Yes.\" Let each yes be to you.",
+        "q": [
+          "What would it mean to choose yourself today?",
+          "What are you ready to recommit to?"
+        ]
+      },
+      "30": {
+        "intro": "This is Key 30, the Gift of Lightness. Wanting things is natural. Holding them lightly means enjoying the longing without needing everything to happen right now.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 29, the Gift of Commitment, which keeps you steady while your desires unfold.",
+        "try": "Hold out an open palm and imagine a feather resting on it. Feel how lightly you'd hold it so it doesn't blow away or get crushed. Hold your wishes like that.",
+        "q": [
+          "What are you longing for?",
+          "How would it feel to hold that longing more lightly?"
+        ]
+      }
+    }
+  },
 ]
 
 e = html.escape

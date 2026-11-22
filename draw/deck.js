@@ -134,5 +134,37 @@ window.DECK = [
    "24": "I welcome the quiet space where new ideas arrive.",
    "44": "I recognise my true allies."
   }
+ },
+ {
+  "a": "25",
+  "b": "46",
+  "aff": {
+   "25": "I have the courage to feel what I feel.",
+   "46": "I delight in being alive in my body."
+  }
+ },
+ {
+  "a": "26",
+  "b": "45",
+  "aff": {
+   "26": "I speak from my heart's true intention.",
+   "45": "Together, we are more."
+  }
+ },
+ {
+  "a": "27",
+  "b": "28",
+  "aff": {
+   "27": "I give freely and with joy.",
+   "28": "I embrace all of who I am, light and shadow."
+  }
+ },
+ {
+  "a": "29",
+  "b": "30",
+  "aff": {
+   "29": "I commit to myself, again and again.",
+   "30": "I hold my desires lightly."
+  }
  }
 ];

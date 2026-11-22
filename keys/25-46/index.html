@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 25 &amp; 46 · Phoebe Affirmations</title>
+<meta name="description" content="I have the courage to feel what I feel. I delight in being alive in my body. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="25" aria-pressed="false">
+      <span class="num">KEY 25</span>
+      <span class="line">I have the courage to feel what I feel.</span>
+    </button>
+    <button class="pick" data-lead="46" aria-pressed="false">
+      <span class="num">KEY 46</span>
+      <span class="line">I delight in being alive in my body.</span>
+    </button>
+  </div>
+
+  <!-- Key 25 leads -->
+  <section class="journey" id="lead-25" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I have the courage to feel what I feel.</p>
+      <p>This is Key 25, the Gift of Acceptance. Feelings aren&#x27;t right or wrong. Letting yourself feel them, fully and kindly, takes courage, and it&#x27;s how they move through.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I delight in being alive in my body.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 46, the Gift of Delight: what opens up when you stop pushing feelings away, the simple pleasure of being alive.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Place one hand on your chest and one on your belly. Breathe slowly and say silently, &quot;Whatever I&#x27;m feeling is welcome.&quot; Let it be there, just as it is.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What feeling have you been holding at arm&#x27;s length?<br>What happens when you let it in?</p>
+    </div>
+  </section>
+
+  <!-- Key 46 leads -->
+  <section class="journey" id="lead-46" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I delight in being alive in my body.</p>
+      <p>This is Key 46, the Gift of Delight. Your body isn&#x27;t just something that carries you around. It&#x27;s how you taste, touch, move and feel the joy of being here.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I have the courage to feel what I feel.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 25, the Gift of Acceptance, which lets every part of you be welcome, so delight can flow freely.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Stretch slowly in whatever way your body wants to. Notice one sensation that feels good: warmth, softness, a loosening. Linger there for a breath or two.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What does your body love?<br>When did you last give it that?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this was hard to reach</h2>
+    <p>Some shifts come more easily with someone beside you. I'm Phoebe, of Radiant Oracle: a PSYCH-K® coach, Human Design and Gene Keys coach, astrologer and tarot coach. I work one to one and in groups, helping you change the beliefs that hold you back and read your own life more clearly.</p>
+    <p>Follow along on Instagram for more practices, or message me there to see how I can help.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['25', '46'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>
