@@ -77,7 +77,7 @@ CARDS = [
   },
   {
     "a": "6", "b": "36",
-    "aff": {"6": "I soften and stay true to myself.", "36": "My heart stays open, even when life is hard."},
+    "aff": {"6": "I soften and stay true to myself.", "36": "My heart stays open, whatever life brings."},
     "lead": {
       "6": {
         "intro": "This is Key 6, the Gift of Diplomacy. Softening isn't giving in. It's choosing warmth over winning, while still knowing where you stand.",

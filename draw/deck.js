@@ -36,7 +36,7 @@ window.DECK = [
   "b": "36",
   "aff": {
    "6": "I soften and stay true to myself.",
-   "36": "My heart stays open, even when life is hard."
+   "36": "My heart stays open, whatever life brings."
   }
  },
  {
