@@ -77,7 +77,7 @@ CARDS = [
   },
   {
     "a": "6", "b": "36",
-    "aff": {"6": "I can soften without losing myself.", "36": "My heart stays open, even when life is hard."},
+    "aff": {"6": "I soften and stay true to myself.", "36": "My heart stays open, even when life is hard."},
     "lead": {
       "6": {
         "intro": "This is Key 6, the Gift of Diplomacy. Softening isn't giving in. It's choosing warmth over winning, while still knowing where you stand.",
@@ -185,7 +185,7 @@ CARDS = [
   },
   {
     "a": "17", "b": "18",
-    "aff": {"17": "I see the bigger picture with my heart.", "18": "I can grow without judging myself."},
+    "aff": {"17": "I see the bigger picture with my heart.", "18": "I grow with kindness towards myself."},
     "lead": {
       "17": {
         "intro": "This is Key 17, the Gift of Far-sightedness. The mind sees details, while the heart sees the whole story. Looking with your heart helps the small worries fall into place.",
@@ -270,7 +270,7 @@ CARDS = [
     "b": "47",
     "aff": {
       "22": "I meet life with grace.",
-      "47": "Every feeling I have can become wisdom."
+      "47": "Every feeling I have becomes wisdom."
     },
     "lead": {
       "22": {
@@ -517,7 +517,7 @@ CARDS = [
     "a": "37",
     "b": "40",
     "aff": {
-      "37": "I give from fullness, not from emptiness.",
+      "37": "I give from a full cup.",
       "40": "My no is as worthy of respect as my yes."
     },
     "lead": {

@@ -35,7 +35,7 @@ window.DECK = [
   "a": "6",
   "b": "36",
   "aff": {
-   "6": "I can soften without losing myself.",
+   "6": "I soften and stay true to myself.",
    "36": "My heart stays open, even when life is hard."
   }
  },
@@ -84,7 +84,7 @@ window.DECK = [
   "b": "18",
   "aff": {
    "17": "I see the bigger picture with my heart.",
-   "18": "I can grow without judging myself."
+   "18": "I grow with kindness towards myself."
   }
  },
  {
@@ -116,7 +116,7 @@ window.DECK = [
   "b": "47",
   "aff": {
    "22": "I meet life with grace.",
-   "47": "Every feeling I have can become wisdom."
+   "47": "Every feeling I have becomes wisdom."
   }
  },
  {
@@ -187,7 +187,7 @@ window.DECK = [
   "a": "37",
   "b": "40",
   "aff": {
-   "37": "I give from fullness, not from emptiness.",
+   "37": "I give from a full cup.",
    "40": "My no is as worthy of respect as my yes."
   }
  },
