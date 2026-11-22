@@ -147,6 +147,78 @@ CARDS = [
       },
     },
   },
+  {
+    "a": "10", "b": "15",
+    "aff": {"10": "I am at ease being myself.", "15": "Being myself is what draws life to me."},
+    "lead": {
+      "10": {
+        "intro": "This is Key 10, the Gift of Naturalness. You don't have to work at being you. When you stop trying to be something else, a natural ease returns.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 15, the Gift of Magnetism: what that ease creates, people and opportunities that fit you, drawn in without effort.",
+        "try": "Let your shoulders drop and your jaw soften. Breathe out slowly, a little longer than you breathe in. Notice what's left when you stop holding yourself up.",
+        "q": ["Where do you feel most at ease?", "Who are you with, and what are you doing?"],
+      },
+      "15": {
+        "intro": "This is Key 15, the Gift of Magnetism. You don't need to chase. When you're simply yourself, the right people and moments find their way to you.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 10, the Gift of Naturalness: the more comfortable you are in your own skin, the more life comes towards you.",
+        "try": "Open your hands and rest them palms up. Take three easy breaths. Imagine, just for a moment, that what's meant for you is already on its way.",
+        "q": ["What has come to you lately without you chasing it?", "Where could you stop chasing and let things come?"],
+      },
+    },
+  },
+  {
+    "a": "17", "b": "18",
+    "aff": {"17": "I see the bigger picture with my heart.", "18": "I can grow without judging myself."},
+    "lead": {
+      "17": {
+        "intro": "This is Key 17, the Gift of Far-sightedness. The mind sees details, while the heart sees the whole story. Looking with your heart helps the small worries fall into place.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 18, the Gift of Integrity, which brings that same kindness to how you see yourself.",
+        "try": "Bring a worry to mind. Now imagine looking back at it a year from now, from somewhere peaceful. Place a hand on your heart and take a slow breath. What feels different from there?",
+        "q": ["What does your heart see that your mind was missing?"],
+      },
+      "18": {
+        "intro": "This is Key 18, the Gift of Integrity. Wanting to improve is healthy. Criticising yourself along the way isn't needed. Growth flourishes in kindness.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 17, the Gift of Far-sightedness, a reminder that every stumble is part of a longer, kinder story.",
+        "try": "Think of something you're being hard on yourself about. Now imagine a dear friend telling you the same thing about themselves. Notice how you'd speak to them, and say it quietly to yourself.",
+        "q": ["How does it feel to be on your own side?"],
+      },
+    },
+  },
+  {
+    "a": "19", "b": "33",
+    "aff": {"19": "My sensitivity is a strength.", "33": "I see my patterns with gentle eyes."},
+    "lead": {
+      "19": {
+        "intro": "This is Key 19, the Gift of Sensitivity. Feeling things deeply isn't a weakness. It's how you notice what others miss, and how you know what you need.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 33, the Gift of Mindfulness, which helps you understand your feelings without being swept away by them.",
+        "try": "Close your eyes for a moment. Scan gently from head to toe and notice where you feel anything at all: warmth, tightness, tingling. Just notice, without changing it.",
+        "q": ["What did your body tell you?", "What do you need right now?"],
+      },
+      "33": {
+        "intro": "This is Key 33, the Gift of Mindfulness. We all repeat certain patterns. Seeing them clearly, and kindly, is the first step to choosing differently.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 19, the Gift of Sensitivity, which lets you notice those patterns in the first place.",
+        "try": "Think of a pattern that keeps repeating. Imagine watching it like a scene in a film, from a comfortable seat. Breathe, and watch with curiosity rather than judgement.",
+        "q": ["What might this pattern be trying to show you?"],
+      },
+    },
+  },
+  {
+    "a": "20", "b": "34",
+    "aff": {"20": "I am fully here, right now.", "34": "I have the strength my life asks of me."},
+    "lead": {
+      "20": {
+        "intro": "This is Key 20, the Gift of Self-Assurance. Confidence lives in the present moment, not in planning or replaying. When you're fully here, you know what to do.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 34, the Gift of Strength: the energy that flows when you're present.",
+        "try": "Feel your feet on the floor. Name three things you can see, two you can hear and one you can feel. Take a breath. You're here.",
+        "q": ["What do you notice now that you've arrived in this moment?"],
+      },
+      "34": {
+        "intro": "This is Key 34, the Gift of Strength. You have more in you than you think. Real strength isn't forcing. It's the natural power that rises when you're doing what's right for you.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 20, the Gift of Self-Assurance, a reminder that strength is easiest to find in the present.",
+        "try": "Sit or stand tall, and press your feet firmly into the ground. Breathe low into your belly. Feel the steadiness that's already in you.",
+        "q": ["What has your strength carried you through?", "Where does it feel easy, rather than forced?"],
+      },
+    },
+  },
 ]
 
 e = html.escape
@@ -154,6 +226,13 @@ e = html.escape
 def journey(card, lead, other):
     L = card["lead"][lead]
     q = "<br>".join(e(x) for x in L["q"])
+    practice = ""
+    if L.get("try"):
+        practice = f'''    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">{e(L["try"])}</p>
+    </div>
+'''
     return f'''  <!-- Key {lead} leads -->
   <section class="journey" id="lead-{lead}" hidden>
     <div class="step">
@@ -166,7 +245,7 @@ def journey(card, lead, other):
       <p class="affirmation">{e(card["aff"][other])}</p>
       <p>{e(L["partner"])}</p>
     </div>
-    <div class="step">
+{practice}    <div class="step">
       <p class="label">Sit with it</p>
       <p class="questions">{q}</p>
     </div>
@@ -214,8 +293,9 @@ def page(card):
 {journey(card, a, b)}
 {journey(card, b, a)}
   <section class="meet">
-    <h2>If this spoke to you</h2>
-    <p>I'm Phoebe, and through Radiant Oracle I offer intuitive readings with crystals and tarot, where the card chooses you and the message unfolds through conversation. I also run group readings for events, parties and gatherings.</p>
+    <h2>If this was hard to reach</h2>
+    <p>Some shifts come more easily with someone beside you. I'm Phoebe, of Radiant Oracle: a PSYCH-K® coach, Human Design and Gene Keys coach, astrologer and tarot coach. I work one to one and in groups, helping you change the beliefs that hold you back and read your own life more clearly.</p>
+    <p>Follow along on Instagram for more practices, or message me there to see how I can help.</p>
     <div class="links">
       <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
     </div>

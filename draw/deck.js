@@ -64,11 +64,43 @@ window.DECK = [
   }
  },
  {
+  "a": "10",
+  "b": "15",
+  "aff": {
+   "10": "I am at ease being myself.",
+   "15": "Being myself is what draws life to me."
+  }
+ },
+ {
   "a": "11",
   "b": "12",
   "aff": {
    "11": "I honour the dreams that light me up.",
    "12": "I choose my words with care and courage."
+  }
+ },
+ {
+  "a": "17",
+  "b": "18",
+  "aff": {
+   "17": "I see the bigger picture with my heart.",
+   "18": "I can grow without judging myself."
+  }
+ },
+ {
+  "a": "19",
+  "b": "33",
+  "aff": {
+   "19": "My sensitivity is a strength.",
+   "33": "I see my patterns with gentle eyes."
+  }
+ },
+ {
+  "a": "20",
+  "b": "34",
+  "aff": {
+   "20": "I am fully here, right now.",
+   "34": "I have the strength my life asks of me."
   }
  }
 ];

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 20 &amp; 34 · Phoebe Affirmations</title>
+<meta name="description" content="I am fully here, right now. I have the strength my life asks of me. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="20" aria-pressed="false">
+      <span class="num">KEY 20</span>
+      <span class="line">I am fully here, right now.</span>
+    </button>
+    <button class="pick" data-lead="34" aria-pressed="false">
+      <span class="num">KEY 34</span>
+      <span class="line">I have the strength my life asks of me.</span>
+    </button>
+  </div>
+
+  <!-- Key 20 leads -->
+  <section class="journey" id="lead-20" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I am fully here, right now.</p>
+      <p>This is Key 20, the Gift of Self-Assurance. Confidence lives in the present moment, not in planning or replaying. When you&#x27;re fully here, you know what to do.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I have the strength my life asks of me.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 34, the Gift of Strength: the energy that flows when you&#x27;re present.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Feel your feet on the floor. Name three things you can see, two you can hear and one you can feel. Take a breath. You&#x27;re here.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What do you notice now that you&#x27;ve arrived in this moment?</p>
+    </div>
+  </section>
+
+  <!-- Key 34 leads -->
+  <section class="journey" id="lead-34" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I have the strength my life asks of me.</p>
+      <p>This is Key 34, the Gift of Strength. You have more in you than you think. Real strength isn&#x27;t forcing. It&#x27;s the natural power that rises when you&#x27;re doing what&#x27;s right for you.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I am fully here, right now.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 20, the Gift of Self-Assurance, a reminder that strength is easiest to find in the present.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Sit or stand tall, and press your feet firmly into the ground. Breathe low into your belly. Feel the steadiness that&#x27;s already in you.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What has your strength carried you through?<br>Where does it feel easy, rather than forced?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this was hard to reach</h2>
+    <p>Some shifts come more easily with someone beside you. I'm Phoebe, of Radiant Oracle: a PSYCH-K® coach, Human Design and Gene Keys coach, astrologer and tarot coach. I work one to one and in groups, helping you change the beliefs that hold you back and read your own life more clearly.</p>
+    <p>Follow along on Instagram for more practices, or message me there to see how I can help.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['20', '34'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>

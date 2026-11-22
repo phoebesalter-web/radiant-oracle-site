@@ -201,3 +201,5 @@ footer {
 
 .journey a { color: var(--ink); text-decoration-color: var(--gold-soft); text-underline-offset: 3px; }
 .journey a:hover { color: var(--gold); }
+
+.practice { font-size: 17px; line-height: 1.7; }
