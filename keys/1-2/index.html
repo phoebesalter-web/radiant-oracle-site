@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 1 &amp; 2 · Phoebe Affirmations</title>
+<meta name="description" content="I let my creative fire burn bright. Life knows the way, and so do I. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="1" aria-pressed="false">
+      <span class="num">KEY 1</span>
+      <span class="line">I let my creative fire burn bright.</span>
+    </button>
+    <button class="pick" data-lead="2" aria-pressed="false">
+      <span class="num">KEY 2</span>
+      <span class="line">Life knows the way, and so do I.</span>
+    </button>
+  </div>
+
+  <!-- Key 1 leads -->
+  <section class="journey" id="lead-1" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I let my creative fire burn bright.</p>
+      <p>This is Key 1, the Gift of Freshness. There&#x27;s a spark in you that&#x27;s entirely your own, not borrowed or copied. It doesn&#x27;t need permission to shine.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">Life knows the way, and so do I.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 2, the Gift of Orientation: the quiet inner compass that lets your fire move in the right direction without forcing it.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What lights you up lately?<br>Where does it seem to want to go?</p>
+    </div>
+  </section>
+
+  <!-- Key 2 leads -->
+  <section class="journey" id="lead-2" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">Life knows the way, and so do I.</p>
+      <p>This is Key 2, the Gift of Orientation. You don&#x27;t have to map every step. Something in you already knows the direction, even when the path isn&#x27;t visible yet.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I let my creative fire burn bright.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 1, the Gift of Freshness: the spark that makes the journey worth taking.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">Where are you trying to control the route?<br>What would trusting the direction feel like?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this spoke to you</h2>
+    <p>I'm Phoebe, and through Radiant Oracle I offer intuitive readings with crystals and tarot, where the card chooses you and the message unfolds through conversation. I also run group readings for events, parties and gatherings.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['1', '2'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>

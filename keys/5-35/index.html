@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 5 &amp; 35 · Phoebe Affirmations</title>
+<meta name="description" content="I trust the rhythm of my life. My life is an adventure, just as it is. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="5" aria-pressed="false">
+      <span class="num">KEY 5</span>
+      <span class="line">I trust the rhythm of my life.</span>
+    </button>
+    <button class="pick" data-lead="35" aria-pressed="false">
+      <span class="num">KEY 35</span>
+      <span class="line">My life is an adventure, just as it is.</span>
+    </button>
+  </div>
+
+  <!-- Key 5 leads -->
+  <section class="journey" id="lead-5" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I trust the rhythm of my life.</p>
+      <p>This is Key 5, the Gift of Patience. Life moves in seasons, not straight lines. What feels like waiting is often things quietly ripening.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">My life is an adventure, just as it is.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 35, the Gift of Adventure, which finds the richness in each moment along the way.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">Where are you pushing, instead of pausing to see what comes to you?<br>What might show up if you waited a moment before acting?</p>
+    </div>
+  </section>
+
+  <!-- Key 35 leads -->
+  <section class="journey" id="lead-35" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">My life is an adventure, just as it is.</p>
+      <p>This is Key 35, the Gift of Adventure. Adventure isn&#x27;t always somewhere new. It&#x27;s meeting your own life with fresh eyes and noticing what&#x27;s already here.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I trust the rhythm of my life.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 5, the Gift of Patience, which lets the adventure unfold in its own time.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What in your life right now is quietly remarkable?<br>What would change if you saw it that way?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this spoke to you</h2>
+    <p>I'm Phoebe, and through Radiant Oracle I offer intuitive readings with crystals and tarot, where the card chooses you and the message unfolds through conversation. I also run group readings for events, parties and gatherings.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['5', '35'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>

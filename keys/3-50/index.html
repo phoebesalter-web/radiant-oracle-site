@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 3 &amp; 50 · Phoebe Affirmations</title>
+<meta name="description" content="I meet change with curiosity. I stay steady at my centre. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="3" aria-pressed="false">
+      <span class="num">KEY 3</span>
+      <span class="line">I meet change with curiosity.</span>
+    </button>
+    <button class="pick" data-lead="50" aria-pressed="false">
+      <span class="num">KEY 50</span>
+      <span class="line">I stay steady at my centre.</span>
+    </button>
+  </div>
+
+  <!-- Key 3 leads -->
+  <section class="journey" id="lead-3" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I meet change with curiosity.</p>
+      <p>This is Key 3, the Gift of Innovation. Change can feel like chaos, but it&#x27;s often something new trying to be born. Curiosity turns it from a threat into a doorway.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I stay steady at my centre.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 50, the Gift of Equilibrium: the still point that lets you meet change without losing yourself.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What&#x27;s changing around you?<br>What might it be making room for?</p>
+    </div>
+  </section>
+
+  <!-- Key 50 leads -->
+  <section class="journey" id="lead-50" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I stay steady at my centre.</p>
+      <p>This is Key 50, the Gift of Equilibrium. Whatever is moving around you, there&#x27;s a place inside that stays calm and fair. Coming back to it is always possible.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I meet change with curiosity.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 3, the Gift of Innovation, a reminder that steadiness isn&#x27;t standing still. It&#x27;s what lets you welcome the new.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">Where is your centre right now?<br>What helps you find your way back to it?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this spoke to you</h2>
+    <p>I'm Phoebe, and through Radiant Oracle I offer intuitive readings with crystals and tarot, where the card chooses you and the message unfolds through conversation. I also run group readings for events, parties and gatherings.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['3', '50'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>
