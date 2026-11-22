@@ -457,6 +457,117 @@ CARDS = [
       }
     }
   },
+  {
+    "a": "31",
+    "b": "41",
+    "aff": {
+      "31": "My voice helps others rise.",
+      "41": "I feel a new beginning stirring in me."
+    },
+    "lead": {
+      "31": {
+        "intro": "This is Key 31, the Gift of Leadership. True leaders don't push from the front. They speak up for what matters, and others feel stronger for hearing it.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 41, the Gift of Anticipation: the fresh vision that gives your voice something worth saying.",
+        "try": "Sit tall, breathe into your chest and let your voice out on a gentle \"ahh\". Feel it resonate. Notice that your voice has its own natural strength.",
+        "q": [
+          "Who could your words encourage today?",
+          "What do you want to speak up for?"
+        ]
+      },
+      "41": {
+        "intro": "This is Key 41, the Gift of Anticipation. Before anything new arrives, there's a feeling, a flutter of possibility. Trust it, even before you know what it is.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 31, the Gift of Leadership, which will one day give your new beginning a voice.",
+        "try": "Close your eyes and imagine a seed under the soil, just starting to stir. Place a hand low on your belly and breathe into it. Notice any flicker of excitement or possibility.",
+        "q": [
+          "What new beginning can you sense?",
+          "What would help it grow?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "32",
+    "b": "42",
+    "aff": {
+      "32": "I build what truly lasts.",
+      "42": "I let life unfold in its own way."
+    },
+    "lead": {
+      "32": {
+        "intro": "This is Key 32, the Gift of Preservation. Some things are worth tending slowly: relationships, skills, homes, dreams. What you nurture with care tends to endure.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 42, the Gift of Detachment, which lets you build without gripping too tightly.",
+        "try": "Rest both hands on a solid surface, a table or your knees. Feel its steadiness. Breathe, and think of one thing in your life you'd like to last.",
+        "q": [
+          "What deserves more of your patient care?",
+          "What could you tend a little today?"
+        ]
+      },
+      "42": {
+        "intro": "This is Key 42, the Gift of Detachment. Not everything needs managing. Some things simply need time and trust, and the freedom to finish in their own way.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 32, the Gift of Preservation, a reminder that letting go and taking care go hand in hand.",
+        "try": "Take a full breath in. As you breathe out, let your hands fall open in your lap. Imagine putting something down that you don't need to carry right now.",
+        "q": [
+          "What are you trying to control?",
+          "What might happen if you let it unfold?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "37",
+    "b": "40",
+    "aff": {
+      "37": "I give from fullness, not from emptiness.",
+      "40": "My no is as worthy of respect as my yes."
+    },
+    "lead": {
+      "40": {
+        "intro": "This is Key 40, the Gift of Resolve. Saying no isn't selfish. It's how you protect your energy, so that your yes can be wholehearted.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 37, the Gift of Equality: what your no makes possible, giving that doesn't drain you.",
+        "try": "Sit tall and say a quiet, clear \"no\" out loud. Notice how it feels in your body. Then say \"yes\", and notice the difference. Both belong to you.",
+        "q": [
+          "What do you need to say no to?",
+          "What would that make space for?"
+        ]
+      },
+      "37": {
+        "intro": "This is Key 37, the Gift of Equality. Caring for others works best when you're cared for too. Relationships thrive when giving and receiving flow both ways.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 40, the Gift of Resolve, which keeps your cup full by honouring your limits.",
+        "try": "Imagine a cup inside your chest. Breathe in and picture it filling with warmth. Keep breathing until it feels full, then notice how it feels to have something to share.",
+        "q": [
+          "How full is your cup right now?",
+          "What would fill it?"
+        ]
+      }
+    }
+  },
+  {
+    "a": "38",
+    "b": "39",
+    "aff": {
+      "38": "I meet my challenges with heart.",
+      "39": "My energy is alive and creative."
+    },
+    "lead": {
+      "38": {
+        "intro": "This is Key 38, the Gift of Perseverance. Some challenges ask us to keep going. When you fight for what you love rather than against what you fear, the struggle gains meaning.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 39, the Gift of Dynamism: the spark that keeps you going.",
+        "try": "Think of a challenge you're facing. Place a hand on your heart and ask, \"What do I love that this is for?\" Breathe that love into your chest.",
+        "q": [
+          "What makes this challenge worth meeting?"
+        ]
+      },
+      "39": {
+        "intro": "This is Key 39, the Gift of Dynamism. Restlessness and frustration are often creative energy looking for somewhere to go. Give it an outlet, and it comes alive.",
+        "partner": "Every Gene Key has a partner, its other half. Yours is Key 38, the Gift of Perseverance, which gives that energy a purpose worth pursuing.",
+        "try": "Shake out your hands, then your arms and shoulders, for ten seconds. Stop, stand still and feel the buzz of energy in your body.",
+        "q": [
+          "Where is your energy wanting to go?",
+          "What would you love to put it into?"
+        ]
+      }
+    }
+  },
 ]
 
 e = html.escape

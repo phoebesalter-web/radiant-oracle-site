@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys 31 &amp; 41 · Phoebe Affirmations</title>
+<meta name="description" content="My voice helps others rise. I feel a new beginning stirring in me. Discover how they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main>
+
+  <header class="brand">
+    <div class="star">✦</div>
+    <p class="name">Phoebe</p>
+    <div class="tag">Affirmations</div>
+  </header>
+
+  <p class="intro">Every card holds a pair. Discover how they meet.</p>
+
+  <p class="choose">Which one chose you?</p>
+  <div class="pair">
+    <button class="pick" data-lead="31" aria-pressed="false">
+      <span class="num">KEY 31</span>
+      <span class="line">My voice helps others rise.</span>
+    </button>
+    <button class="pick" data-lead="41" aria-pressed="false">
+      <span class="num">KEY 41</span>
+      <span class="line">I feel a new beginning stirring in me.</span>
+    </button>
+  </div>
+
+  <!-- Key 31 leads -->
+  <section class="journey" id="lead-31" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">My voice helps others rise.</p>
+      <p>This is Key 31, the Gift of Leadership. True leaders don&#x27;t push from the front. They speak up for what matters, and others feel stronger for hearing it.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">I feel a new beginning stirring in me.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 41, the Gift of Anticipation: the fresh vision that gives your voice something worth saying.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Sit tall, breathe into your chest and let your voice out on a gentle &quot;ahh&quot;. Feel it resonate. Notice that your voice has its own natural strength.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">Who could your words encourage today?<br>What do you want to speak up for?</p>
+    </div>
+  </section>
+
+  <!-- Key 41 leads -->
+  <section class="journey" id="lead-41" hidden>
+    <div class="step">
+      <p class="label">The card that chose you</p>
+      <p class="affirmation">I feel a new beginning stirring in me.</p>
+      <p>This is Key 41, the Gift of Anticipation. Before anything new arrives, there&#x27;s a feeling, a flutter of possibility. Trust it, even before you know what it is.</p>
+    </div>
+    <div class="step">
+      <p class="label">Turn the card around</p>
+      <p class="affirmation">My voice helps others rise.</p>
+      <p>Every Gene Key has a partner, its other half. Yours is Key 31, the Gift of Leadership, which will one day give your new beginning a voice.</p>
+    </div>
+    <div class="step">
+      <p class="label">Try this</p>
+      <p class="practice">Close your eyes and imagine a seed under the soil, just starting to stir. Place a hand low on your belly and breathe into it. Notice any flicker of excitement or possibility.</p>
+    </div>
+    <div class="step">
+      <p class="label">Sit with it</p>
+      <p class="questions">What new beginning can you sense?<br>What would help it grow?</p>
+    </div>
+  </section>
+
+  <section class="meet">
+    <h2>If this was hard to reach</h2>
+    <p>Some shifts come more easily with someone beside you. I'm Phoebe, of Radiant Oracle: a PSYCH-K® coach, Human Design and Gene Keys coach, astrologer and tarot coach. I work one to one and in groups, helping you change the beliefs that hold you back and read your own life more clearly.</p>
+    <p>Follow along on Instagram for more practices, or message me there to see how I can help.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/radiant.oracle/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>A kinder you · A brighter tomorrow</footer>
+
+</main>
+<script>
+  (function () {
+    var keys = ['31', '41'];
+    var picks = document.querySelectorAll('.pick');
+    function show(lead, scroll) {
+      picks.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lead === lead ? 'true' : 'false');
+      });
+      keys.forEach(function (k) {
+        document.getElementById('lead-' + k).hidden = (k !== lead);
+      });
+      if (scroll) document.getElementById('lead-' + lead).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    picks.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        history.replaceState(null, '', '#' + btn.dataset.lead);
+        show(btn.dataset.lead, true);
+      });
+    });
+    var start = location.hash.replace('#', '');
+    if (keys.indexOf(start) !== -1) show(start, false);
+  })();
+</script>
+</body>
+</html>

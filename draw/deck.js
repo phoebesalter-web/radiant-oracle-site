@@ -166,5 +166,37 @@ window.DECK = [
    "29": "I commit to myself, again and again.",
    "30": "I hold my desires lightly."
   }
+ },
+ {
+  "a": "31",
+  "b": "41",
+  "aff": {
+   "31": "My voice helps others rise.",
+   "41": "I feel a new beginning stirring in me."
+  }
+ },
+ {
+  "a": "32",
+  "b": "42",
+  "aff": {
+   "32": "I build what truly lasts.",
+   "42": "I let life unfold in its own way."
+  }
+ },
+ {
+  "a": "37",
+  "b": "40",
+  "aff": {
+   "37": "I give from fullness, not from emptiness.",
+   "40": "My no is as worthy of respect as my yes."
+  }
+ },
+ {
+  "a": "38",
+  "b": "39",
+  "aff": {
+   "38": "I meet my challenges with heart.",
+   "39": "My energy is alive and creative."
+  }
  }
 ];
