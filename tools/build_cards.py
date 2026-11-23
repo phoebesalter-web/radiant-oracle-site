@@ -752,22 +752,22 @@ CARDS = [
     "a": "53",
     "b": "54",
     "aff": {
-      "53": "Every ending makes space for something new.",
+      "53": "I trust what has already begun in me.",
       "54": "I rise, and I lift others with me."
     },
     "lead": {
       "53": {
-        "intro": "This is Key 53, Fresh Chapters. Endings can feel like loss, yet they also clear the ground. Every closing chapter makes room for the next one to begin.",
-        "partner": "Every key has a partner, its other half. Yours is Key 54, Rising Together: the upward energy that fills the new space.",
-        "try": "Breathe all the way out, emptying your lungs completely. Pause. Then let the next breath fill you slowly and fully. Notice how emptiness makes room.",
+        "intro": "This is Key 53, What's Already Begun. Something in you is already moving. Before the mind decides, the body often knows where it's being drawn. Trusting that pull, rather than hesitating, lets new beginnings unfold naturally.",
+        "partner": "Every key has a partner, its other half. Yours is Key 54, Rising Together: the upward energy that grows from what's already begun.",
+        "try": "Sit back and let your body relax completely, as if you're a passenger rather than the driver. Breathe slowly. Notice which way you feel gently pulled: towards a person, a place, an idea or a next step.",
         "q": [
-          "What's ending in my life?",
-          "What might it be making space for?"
+          "What has already begun in me?",
+          "Where would I go if I let my body lead?"
         ]
       },
       "54": {
         "intro": "This is Key 54, Rising Together. Your ambition is a good thing, especially when it lifts the people around you. Rising together makes the climb worth it.",
-        "partner": "Every key has a partner, its other half. Yours is Key 53, Fresh Chapters, which keeps opening new chapters for you to grow into.",
+        "partner": "Every key has a partner, its other half. Yours is Key 53, What's Already Begun: the momentum already moving in you, ready to carry you upward.",
         "try": "Stand up and slowly raise your arms above your head as you breathe in. Feel yourself lengthen. As you lower them, imagine reaching a hand to someone beside you.",
         "q": [
           "What am I rising towards?",

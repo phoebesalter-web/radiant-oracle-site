@@ -219,7 +219,7 @@ window.DECK = [
   "a": "53",
   "b": "54",
   "aff": {
-   "53": "Every ending makes space for something new.",
+   "53": "I trust what has already begun in me.",
    "54": "I rise, and I lift others with me."
   }
  },
