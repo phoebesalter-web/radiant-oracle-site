@@ -915,6 +915,45 @@ def journey(card, lead, other):
   </section>
 '''
 
+THEMES = {
+  # key: (main colour, deep colour for text)
+  "11": ("#c9b6e4", "#5e4a86"),   # Guiding Dreams: twilight lavender
+  "12": ("#a9d2e6", "#2f6683"),   # Brave Words: clear throat blue
+}
+
+def theme_css(a, b):
+    if a not in THEMES or b not in THEMES:
+        return ""
+    (ca, da), (cb, db) = THEMES[a], THEMES[b]
+    return f"""
+<style>
+  :root {{ --ka: {ca}; --ka-deep: {da}; --kb: {cb}; --kb-deep: {db}; }}
+  body {{
+    background-image:
+      radial-gradient(ellipse at 0% 0%, var(--ka) 0%, transparent 55%),
+      radial-gradient(ellipse at 100% 100%, var(--kb) 0%, transparent 55%),
+      linear-gradient(170deg, color-mix(in srgb, var(--ka) 30%, var(--cream)) 0%, var(--cream) 45%, color-mix(in srgb, var(--kb) 30%, var(--cream)) 100%);
+    background-attachment: scroll;
+    background-size: 100% 60%, 100% 60%, 100% 100%;
+    background-position: top left, bottom right, top left;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }}
+  .pick[data-lead="{a}"] {{ border-color: var(--ka); background: color-mix(in srgb, var(--ka) 14%, var(--paper)); }}
+  .pick[data-lead="{b}"] {{ border-color: var(--kb); background: color-mix(in srgb, var(--kb) 14%, var(--paper)); }}
+  .pick[data-lead="{a}"] .num {{ color: var(--ka-deep); }}
+  .pick[data-lead="{b}"] .num {{ color: var(--kb-deep); }}
+  .pick[data-lead="{a}"][aria-pressed="true"] {{ box-shadow: 0 0 0 2px var(--ka), 0 10px 30px color-mix(in srgb, var(--ka) 45%, transparent); }}
+  .pick[data-lead="{b}"][aria-pressed="true"] {{ box-shadow: 0 0 0 2px var(--kb), 0 10px 30px color-mix(in srgb, var(--kb) 45%, transparent); }}
+  #lead-{a} {{ border-color: var(--ka); background: linear-gradient(180deg, color-mix(in srgb, var(--ka) 16%, var(--paper)) 0%, var(--paper) 45%, color-mix(in srgb, var(--kb) 16%, var(--paper)) 100%); }}
+  #lead-{b} {{ border-color: var(--kb); background: linear-gradient(180deg, color-mix(in srgb, var(--kb) 16%, var(--paper)) 0%, var(--paper) 45%, color-mix(in srgb, var(--ka) 16%, var(--paper)) 100%); }}
+  #lead-{a} .step:first-child .label {{ color: var(--ka-deep); }}
+  #lead-{a} .step:nth-child(2) .label {{ color: var(--kb-deep); }}
+  #lead-{b} .step:first-child .label {{ color: var(--kb-deep); }}
+  #lead-{b} .step:nth-child(2) .label {{ color: var(--ka-deep); }}
+  #lead-{a} .step + .step, #lead-{b} .step + .step {{ border-top-color: color-mix(in srgb, var(--ka) 50%, var(--kb)); }}
+</style>"""
+
 def page(card):
     a, b = card["a"], card["b"]
     desc = e(card["aff"][a] + " " + card["aff"][b] + " Discover how they meet.")
@@ -928,7 +967,7 @@ def page(card):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../style.css">{theme_css(a, b)}
 </head>
 <body>
 <main>

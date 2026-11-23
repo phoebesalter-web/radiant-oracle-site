@@ -9,6 +9,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../style.css">
+<style>
+  :root { --ka: #c9b6e4; --ka-deep: #5e4a86; --kb: #a9d2e6; --kb-deep: #2f6683; }
+  body {
+    background-image:
+      radial-gradient(ellipse at 0% 0%, var(--ka) 0%, transparent 55%),
+      radial-gradient(ellipse at 100% 100%, var(--kb) 0%, transparent 55%),
+      linear-gradient(170deg, color-mix(in srgb, var(--ka) 30%, var(--cream)) 0%, var(--cream) 45%, color-mix(in srgb, var(--kb) 30%, var(--cream)) 100%);
+    background-attachment: scroll;
+    background-size: 100% 60%, 100% 60%, 100% 100%;
+    background-position: top left, bottom right, top left;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  .pick[data-lead="11"] { border-color: var(--ka); background: color-mix(in srgb, var(--ka) 14%, var(--paper)); }
+  .pick[data-lead="12"] { border-color: var(--kb); background: color-mix(in srgb, var(--kb) 14%, var(--paper)); }
+  .pick[data-lead="11"] .num { color: var(--ka-deep); }
+  .pick[data-lead="12"] .num { color: var(--kb-deep); }
+  .pick[data-lead="11"][aria-pressed="true"] { box-shadow: 0 0 0 2px var(--ka), 0 10px 30px color-mix(in srgb, var(--ka) 45%, transparent); }
+  .pick[data-lead="12"][aria-pressed="true"] { box-shadow: 0 0 0 2px var(--kb), 0 10px 30px color-mix(in srgb, var(--kb) 45%, transparent); }
+  #lead-11 { border-color: var(--ka); background: linear-gradient(180deg, color-mix(in srgb, var(--ka) 16%, var(--paper)) 0%, var(--paper) 45%, color-mix(in srgb, var(--kb) 16%, var(--paper)) 100%); }
+  #lead-12 { border-color: var(--kb); background: linear-gradient(180deg, color-mix(in srgb, var(--kb) 16%, var(--paper)) 0%, var(--paper) 45%, color-mix(in srgb, var(--ka) 16%, var(--paper)) 100%); }
+  #lead-11 .step:first-child .label { color: var(--ka-deep); }
+  #lead-11 .step:nth-child(2) .label { color: var(--kb-deep); }
+  #lead-12 .step:first-child .label { color: var(--kb-deep); }
+  #lead-12 .step:nth-child(2) .label { color: var(--ka-deep); }
+  #lead-11 .step + .step, #lead-12 .step + .step { border-top-color: color-mix(in srgb, var(--ka) 50%, var(--kb)); }
+</style>
 </head>
 <body>
 <main>
