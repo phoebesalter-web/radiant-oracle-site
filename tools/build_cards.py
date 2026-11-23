@@ -766,7 +766,7 @@ CARDS = [
         ]
       },
       "54": {
-        "intro": "This is Key 54, Rising Together. Your ambition is a good thing, especially when it lifts the people around you. Rising together makes the climb worth it.",
+        "intro": "This is Key 54, Rising Together. There's a drive in you to grow and reach for more. When it rises from what's already moving in you, ambition becomes aspiration, and it naturally lifts the people around you.",
         "partner": "Every key has a partner, its other half. Yours is Key 53, What's Already Begun: the momentum already moving in you, ready to carry you upward.",
         "try": "Stand up and slowly raise your arms above your head as you breathe in. Feel yourself lengthen. As you lower them, imagine reaching a hand to someone beside you.",
         "q": [
