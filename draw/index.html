@@ -60,13 +60,17 @@
   }
   .btn.ghost { background: transparent; color: var(--ink); }
   .btn[hidden] { display: none; }
+  .draw-main { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
+  .draw-foot { margin-top: auto; padding-top: 40px; }
+  .draw-foot p { margin: 0 0 10px; }
+  .home-link { color: var(--ink); text-decoration-color: var(--gold); text-underline-offset: 4px; letter-spacing: .18em; }
   @media (prefers-reduced-motion: reduce) {
     .card { transition: none; } .card.shuffle { animation: none; }
   }
 </style>
 </head>
 <body>
-<main>
+<main class="draw-main">
   <header class="brand">
     <div class="star">✦</div>
     <p class="name">Phoebe</p>
@@ -97,7 +101,10 @@
     <button class="btn ghost" id="again" hidden>Draw again</button>
   </div>
 
-  <footer><a href="../" style="color: inherit;">Phoebe Affirmations</a> · A kinder you · A brighter tomorrow</footer>
+  <footer class="draw-foot">
+    <p>A kinder you · A brighter tomorrow</p>
+    <p><a href="../" class="home-link">Phoebe Affirmations</a></p>
+  </footer>
 </main>
 <script src="deck.js"></script>
 <script>
