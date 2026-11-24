@@ -210,3 +210,5 @@ footer {
 div.intro { margin-bottom: 32px; }
 div.intro p { margin: 0 0 6px; }
 div.intro .intro-lead { font-size: 27px; color: var(--ink); margin-bottom: 14px; }
+
+.meet .meet-lead { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 23px; line-height: 1.35; margin-bottom: 20px; }
